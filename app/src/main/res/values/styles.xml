@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- 如果使用下面这个parent主题，就是隐藏标题栏，同时隐藏状态栏 -->
+    <!--  <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen"> -->
+    <!-- 使用下面的这个主题也可以隐藏标题栏，只是主题是默认的 Dark -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.NoActionBar"> -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--<style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.bkjk.infra.test"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:25.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Glide框架引入
+//    implementation 'com.github.bumptech.glide:glide:4.4.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+//    implementation 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
+
+    // 微众银行
+    implementation(name: 'mdl_sdk-debug', ext: 'aar')
+    implementation(name: 'WbCloudNormal-release-v3.0.34-00c2cbc', ext: 'aar')
+    implementation(name: 'webank-wecamera-v1.0.18-b06fe88', ext: 'aar')
+    implementation(name: 'webank-wrapmp4-b6047dd', ext: 'aar')
+    implementation(name: 'youtu-facelight-v1.1.10-3ff9f74', ext: 'aar')
+    implementation(name: 'webank-facelight-pro-release-90b754e', ext: 'aar')
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+}
