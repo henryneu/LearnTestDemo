@@ -5,15 +5,17 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 读取电话的状态信息的权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 处理拨出电话，允许程序监视,修改或放弃播出电话 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 读取电话的状态信息的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 处理拨出电话，允许程序监视,修改或放弃播出电话 -->
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-    <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
-    <!-- android:theme="@android:style/Theme.Light.NoTitleBar" -->
+    <permission android:name="com.bkjk.infra.test.permission.ACCESS_BOOK_MANAGER"
+        android:protectionLevel="normal" />
+
+    <!-- 使用我们定义的权限进行权限验证 -->
+    <uses-permission android:name="com.bkjk.infra.test.permission.ACCESS_BOOK_MANAGER" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,25 +24,41 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
+
+        <service
+            android:name=".service_8.Mine2Service"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".okhttp.OkHttpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- 某一个Activity设置隐藏ActionBar -->
+        <activity android:name=".spannable.SpannableActivity" /> <!-- android:theme="@android:style/Theme.Holo.Light.NoActionBar" /> -->
         <!-- 某一个Activity设置隐藏ActionBar -->
-        <activity android:name=".spannable.SpannableActivity" />
-        <!-- android:theme="@android:style/Theme.Holo.Light.NoActionBar" /> -->
-        <!-- 某一个Activity设置隐藏ActionBar -->
-        <activity android:name=".glide.GlideSampleActivity" />
-        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
+        <activity android:name=".glide.GlideSampleActivity" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
         <activity android:name=".hotfix.SampleHotFixActivity" />
         <activity android:name=".MainScrollActivity" />
         <activity android:name=".phonecall.PhoneCallActivity" />
         <activity android:name=".webank.WeBankActivity" />
+        <activity android:name=".webank.WeBankPreviewActivity" />
+        <activity android:name=".SubThreadActivity" />
+        <activity android:name=".CircleViewActivity" />
+        <activity android:name=".remote.RemoteActivity" />
 
         <service android:name=".phonecall.PhoneListenService" />
+
+        <activity android:name=".service_8.TestServiceActivity" />
+        <activity android:name=".binder.BookManagerActivity" />
+
+        <service
+            android:name=".binder.BookManagerService"
+            android:process=":remote" />
+
     </application>
 
 </manifest>
