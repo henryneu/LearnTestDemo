@@ -1,6 +1,5 @@
 package com.bkjk.infra.test;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
@@ -11,8 +10,6 @@ import android.util.Printer;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -20,14 +17,14 @@ import android.widget.TextView;
 
 import com.bkjk.infra.test.bankcard.EditTextWatcher;
 import com.bkjk.infra.test.binder.BookManagerActivity;
+import com.bkjk.infra.test.binderpool.BinderPoolActivity;
 import com.bkjk.infra.test.glide.GlideSampleActivity;
 import com.bkjk.infra.test.hotfix.SampleHotFixActivity;
 import com.bkjk.infra.test.okhttp.OkHttpActivity;
 import com.bkjk.infra.test.phonecall.PhoneCallActivity;
 import com.bkjk.infra.test.service_8.TestServiceActivity;
+import com.bkjk.infra.test.socket.TCPSocketClientActivity;
 import com.bkjk.infra.test.spannable.SpannableActivity;
-import com.bkjk.infra.test.webank.WeBankActivity;
-import com.squareup.haha.perflib.Main;
 
 import java.util.LinkedList;
 
@@ -43,12 +40,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mHotFixTv;
     private TextView mScrollTv;
     private TextView mPhoneCallTv;
-    private TextView mWeBankTv;
+    private TextView mBinderPoolTv;
     private TextView mSubThreadTv;
     private TextView mCustomViewTv;
     private TextView mRequestNetTv;
     private TextView mService8Tv;
     private TextView mBinderTv;
+    private TextView mSocketTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,24 +83,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mHotFixTv = (TextView) findViewById(R.id.test_hot_fix_tv);
         mScrollTv = (TextView) findViewById(R.id.test_scroll_fill_tv);
         mPhoneCallTv = (TextView) findViewById(R.id.test_phone_call_tv);
-        mWeBankTv = (TextView) findViewById(R.id.test_we_bank_tv);
         mSubThreadTv = (TextView) findViewById(R.id.test_sub_thread_tv);
         mCustomViewTv = (TextView) findViewById(R.id.test_circle_view);
         mRequestNetTv = (TextView) findViewById(R.id.test_request_net_view);
         mService8Tv = (TextView) findViewById(R.id.test_service_8_view);
         mBinderTv = (TextView) findViewById(R.id.test_binder_view);
+        mBinderPoolTv = (TextView) findViewById(R.id.test_binder_pool_tv);
+        mSocketTv = (TextView) findViewById(R.id.test_server_socket_tv);
         EditTextWatcher.bind(mBankInputEt);
         mSpanTv.setOnClickListener(this);
         mGlideTv.setOnClickListener(this);
         mHotFixTv.setOnClickListener(this);
         mScrollTv.setOnClickListener(this);
         mPhoneCallTv.setOnClickListener(this);
-        mWeBankTv.setOnClickListener(this);
         mSubThreadTv.setOnClickListener(this);
         mCustomViewTv.setOnClickListener(this);
         mRequestNetTv.setOnClickListener(this);
         mService8Tv.setOnClickListener(this);
         mBinderTv.setOnClickListener(this);
+        mBinderPoolTv.setOnClickListener(this);
+        mSocketTv.setOnClickListener(this);
     }
 
     /**
@@ -186,8 +186,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (viewId == R.id.test_phone_call_tv) {
             Intent intent = new Intent(MainActivity.this, PhoneCallActivity.class);
             startActivity(intent);
-        } else if (viewId == R.id.test_we_bank_tv) {
-            Intent intent = new Intent(MainActivity.this, WeBankActivity.class);
+        } else if (viewId == R.id.test_binder_pool_tv) {
+            Intent intent = new Intent(MainActivity.this, BinderPoolActivity.class);
             startActivity(intent);
         } else if (viewId == R.id.test_sub_thread_tv) {
             Intent intent = new Intent(MainActivity.this, SubThreadActivity.class);
@@ -203,6 +203,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (viewId == R.id.test_binder_view) {
             Intent intent = new Intent(MainActivity.this, BookManagerActivity.class);
+            startActivity(intent);
+        } else if (viewId == R.id.test_server_socket_tv) {
+            Intent intent = new Intent(MainActivity.this, TCPSocketClientActivity.class);
             startActivity(intent);
         }
     }

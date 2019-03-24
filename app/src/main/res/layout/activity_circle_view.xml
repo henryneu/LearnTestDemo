@@ -13,13 +13,13 @@
         android:layout_margin="20dp"
         android:background="#000000"
         android:padding="20dp"
-        app:circle_color="@color/comm_blue" />
+        app:circle_color="@color/colorPrimary" />
 
     <Button
         android:id="@+id/test_notification_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/comm_gold"
+        android:background="@color/colorPrimary"
         android:layout_marginLeft="20dp"
         android:text="测试通知" />
 
@@ -27,7 +27,7 @@
         android:id="@+id/test_notification_custom_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/comm_gold"
+        android:background="@color/colorPrimary"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="测试属性动画" />
@@ -36,7 +36,7 @@
         android:id="@+id/test_notification_custom_listener_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/comm_gold"
+        android:background="@color/colorPrimary"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textAllCaps="false"
