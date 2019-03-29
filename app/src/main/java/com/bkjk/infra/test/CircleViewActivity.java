@@ -22,6 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RemoteViews;
 
 import com.bkjk.infra.test.remote.RemoteActivity;
@@ -31,8 +32,6 @@ public class CircleViewActivity extends AppCompatActivity implements View.OnClic
     private Button mButton;
     private Button mValueBt;
     private Button mValueListenerBt;
-
-    //Activity
 
     Handler mHandler1 = new MyHandler();
 
@@ -58,7 +57,6 @@ public class CircleViewActivity extends AppCompatActivity implements View.OnClic
     //HandlerThread
     //StringBuffer
     //LocalBroadcastManager
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

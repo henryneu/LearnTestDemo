@@ -1,8 +1,10 @@
 package com.bkjk.infra.test;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
+import android.view.TouchDelegate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,11 +25,27 @@ public class SubThreadActivity extends AppCompatActivity {
     @BindView(R.id.test_button_right_bt)
     CustomButton mRightBt;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_thread);
         ButterKnife.bind(this);
+
+        mLeftBt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return false;
+            }
+        });
+
+        mLeftBt.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(SubThreadActivity.this, "点击了左Button的长按事件", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
         /**
         new Thread(new Runnable() {
@@ -46,11 +64,13 @@ public class SubThreadActivity extends AppCompatActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        System.out.println("Activity--->dispatchTouchEvent中收到--->event");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        System.out.println("Activity--->onTouchEvent中收到--->event");
         return super.onTouchEvent(event);
     }
 

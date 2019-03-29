@@ -65,9 +65,10 @@ public class CustomButton extends Button {
                 break;
             case MotionEvent.ACTION_UP:
                 System.out.println(this.getText() + "--->onTouchEvent中收到--->ACTION_UP");
+                super.performClick();
                 break;
         }
 
-        return super.onTouchEvent(event);
+        return true;
     }
 }

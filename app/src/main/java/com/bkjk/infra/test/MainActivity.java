@@ -1,8 +1,10 @@
 package com.bkjk.infra.test;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
+import android.os.UserHandle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,7 @@ import com.bkjk.infra.test.phonecall.PhoneCallActivity;
 import com.bkjk.infra.test.service_8.TestServiceActivity;
 import com.bkjk.infra.test.socket.TCPSocketClientActivity;
 import com.bkjk.infra.test.spannable.SpannableActivity;
+import com.bkjk.infra.test.timeline.TimeLineActivity;
 
 import java.util.LinkedList;
 
@@ -193,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, SubThreadActivity.class);
             startActivity(intent);
         } else if (viewId == R.id.test_circle_view) {
-            Intent intent = new Intent(MainActivity.this, CircleViewActivity.class);
+            Intent intent = new Intent(MainActivity.this, TimeLineActivity.class);
             startActivity(intent);
         } else if (viewId == R.id.test_request_net_view) {
             Intent intent = new Intent(MainActivity.this, OkHttpActivity.class);

@@ -58,14 +58,18 @@
             android:process=":remote" />
 
         <activity android:name=".binderpool.BinderPoolActivity" />
+
         <service
             android:name=".binderpool.BinderPoolService"
             android:process=":remote" />
 
         <activity android:name=".socket.TCPSocketClientActivity" />
+
         <service
             android:name=".socket.TCPSocketClientService"
             android:process=":remote" />
+
+        <activity android:name=".timeline.TimeLineActivity" />
 
     </application>
 

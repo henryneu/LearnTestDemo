@@ -33,16 +33,16 @@ public class CustomRelativeLayout extends RelativeLayout {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                System.out.println("--->dispatch中收到--->ACTION_DOWN");
+                System.out.println("viewGroup--->dispatch中收到--->ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                System.out.println("--->dispatch中收到--->ACTION_MOVE");
+                System.out.println("viewGroup--->dispatch中收到--->ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_CANCEL:
-                System.out.println("--->dispatch中收到--->ACTION_CANCEL");
+                System.out.println("viewGroup--->dispatch中收到--->ACTION_CANCEL");
                 break;
             case MotionEvent.ACTION_UP:
-                System.out.println("--->dispatch中收到--->ACTION_UP");
+                System.out.println("viewGroup--->dispatch中收到--->ACTION_UP");
                 break;
         }
 
@@ -54,16 +54,16 @@ public class CustomRelativeLayout extends RelativeLayout {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                System.out.println("--->onInterceptTouchEvent中收到--->ACTION_DOWN");
+                System.out.println("viewGroup--->onInterceptTouchEvent中收到--->ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                System.out.println("--->onInterceptTouchEvent中收到--->ACTION_MOVE");
+                System.out.println("viewGroup--->onInterceptTouchEvent中收到--->ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_CANCEL:
-                System.out.println("--->onInterceptTouchEvent中收到--->ACTION_CANCEL");
+                System.out.println("viewGroup--->onInterceptTouchEvent中收到--->ACTION_CANCEL");
                 break;
             case MotionEvent.ACTION_UP:
-                System.out.println("--->onInterceptTouchEvent中收到--->ACTION_UP");
+                System.out.println("viewGroup--->onInterceptTouchEvent中收到--->ACTION_UP");
                 break;
         }
 
@@ -75,16 +75,16 @@ public class CustomRelativeLayout extends RelativeLayout {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                System.out.println("--->onTouchEvent中收到--->ACTION_DOWN");
+                System.out.println("viewGroup--->onTouchEvent中收到--->ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                System.out.println("--->onTouchEvent中收到--->ACTION_MOVE");
+                System.out.println("viewGroup--->onTouchEvent中收到--->ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_CANCEL:
-                System.out.println("--->onTouchEvent中收到--->ACTION_CANCEL");
+                System.out.println("viewGroup--->onTouchEvent中收到--->ACTION_CANCEL");
                 break;
             case MotionEvent.ACTION_UP:
-                System.out.println("--->onTouchEvent中收到--->ACTION_UP");
+                System.out.println("viewGroup--->onTouchEvent中收到--->ACTION_UP");
                 break;
         }
 
