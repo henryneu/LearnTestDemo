@@ -3,8 +3,9 @@ package com.bkjk.infra.test.widgets;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
 import android.text.style.ReplacementSpan;
+
+import androidx.annotation.NonNull;
 
 /**
  * Author: zhouzhenhua

@@ -9,7 +9,6 @@ import android.os.Parcel;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.bkjk.infra.test.Book;
@@ -19,6 +18,8 @@ import com.bkjk.infra.test.IOnNewBookArrivedListener;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import androidx.annotation.Nullable;
 
 /**
  * Author: zhouzhenhua

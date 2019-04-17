@@ -1,7 +1,8 @@
 package com.bkjk.infra.test;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainScrollActivity extends AppCompatActivity {
 

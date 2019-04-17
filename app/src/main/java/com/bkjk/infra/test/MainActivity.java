@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
 import android.os.UserHandle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Printer;
@@ -30,6 +29,8 @@ import com.bkjk.infra.test.spannable.SpannableActivity;
 import com.bkjk.infra.test.timeline.TimeLineActivity;
 
 import java.util.LinkedList;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

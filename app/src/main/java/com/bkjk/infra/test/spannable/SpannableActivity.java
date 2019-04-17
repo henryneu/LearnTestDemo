@@ -2,7 +2,6 @@ package com.bkjk.infra.test.spannable;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;

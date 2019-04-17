@@ -9,7 +9,6 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +20,8 @@ import com.bkjk.infra.test.IOnNewBookArrivedListener;
 import com.bkjk.infra.test.R;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BookManagerActivity extends AppCompatActivity {
 

@@ -2,7 +2,6 @@ package com.bkjk.infra.test;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.TouchDelegate;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 
 import com.bkjk.infra.test.widgets.CustomButton;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

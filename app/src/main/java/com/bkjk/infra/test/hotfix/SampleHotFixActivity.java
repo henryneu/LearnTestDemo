@@ -1,7 +1,6 @@
 package com.bkjk.infra.test.hotfix;
 
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bkjk.infra.test.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SampleHotFixActivity extends AppCompatActivity implements View.OnClickListener {
 

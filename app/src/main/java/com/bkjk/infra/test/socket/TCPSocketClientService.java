@@ -3,7 +3,6 @@ package com.bkjk.infra.test.socket;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,6 +13,8 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Random;
+
+import androidx.annotation.Nullable;
 
 /**
  * Author: zhouzhenhua

@@ -4,11 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
-import android.support.v4.util.LruCache;
-import android.widget.ImageView;
-
-import com.bkjk.infra.test.R;
 
 /**
  * Author: zhouzhenhua

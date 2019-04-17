@@ -2,8 +2,6 @@ package com.bkjk.infra.test.glide;
 
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.support.v4.util.LruCache;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +9,9 @@ import android.widget.ImageView;
 import com.bkjk.infra.test.R;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.collection.LruCache;
 //import com.bumptech.glide.request.RequestOptions;
 
 public class GlideSampleActivity extends AppCompatActivity {

@@ -2,7 +2,6 @@ package com.bkjk.infra.test.binderpool;
 
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -10,7 +9,7 @@ import com.bkjk.infra.test.IComputer;
 import com.bkjk.infra.test.IEncodeDecode;
 import com.bkjk.infra.test.R;
 
-import gnu.trove.THash;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BinderPoolActivity extends AppCompatActivity {
 
